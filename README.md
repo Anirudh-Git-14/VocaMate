@@ -63,39 +63,39 @@ Users can view:
 
 Splash Screen
 
-![Splash Screen](screenshots/01_splash.jpg)
+![Splash Screen](screenshots/01_splash.jpeg)
 
 Login Screen
 
-![Login Screen](screenshots/02_login.jpg)
+![Login Screen](screenshots/02_login.jpeg)
 
 Language Selection
 
-![Language Selection](screenshots/03_language.jpg)
+![Language Selection](screenshots/03_language.jpeg)
 
 Mode Selection
 
-![Mode Selection](screenshots/04_mode.jpg)
+![Mode Selection](screenshots/04_mode.jpeg)
 
 Conversation Screen
 
-![Conversation Screen](screenshots/05_conversation.jpg)
+![Conversation Screen](screenshots/05_conversation.jpeg)
 
 Mistake Report
 
-![Mistake Report](screenshots/06_report.jpg)
+![Mistake Report](screenshots/06_report.jpeg)
 
 Practice History
 
-![Practice History](screenshots/07_history.jpg)
+![Practice History](screenshots/07_history.jpeg)
 
 History Detail
 
-![History Detail](screenshots/08_history_detail.jpg)
+![History Detail](screenshots/08_history_detail.jpeg)
 
 Settings Screen
 
-![Settings Screen](screenshots/09_settings.jpg)
+![Settings Screen](screenshots/09_settings.jpeg)
 
 ## Tech Stack
 
