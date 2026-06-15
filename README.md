@@ -122,39 +122,17 @@ Users can view:
 ## App Flow
 
 Splash Screen
-↓
+<
 Login Screen
-↓
+<
 Language Selection
-↓
+<
 Mode Selection
-↓
+<
 Conversation Screen
-↓
+<
 Mistake Report
 
-## Firebase Data Structure
-
-Practice reports are stored user-wise in Cloud Firestore.
-
-```text
-users
- └── userEmail
-      ├── email
-      ├── userId
-      ├── lastActiveAt
-      └── conversation_reports
-           └── sessionId
-                ├── language
-                ├── mode
-                ├── transcript
-                ├── fullConversation
-                ├── aiReport
-                ├── reportStatus
-                ├── createdAt
-                ├── userDeleted
-                └── deletedAt
-```
 
 ## Purpose
 
