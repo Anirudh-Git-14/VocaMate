@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/bg_dark"
+    android:fitsSystemWindows="true"
+    android:paddingStart="28dp"
+    android:paddingEnd="28dp"
+    android:paddingTop="36dp"
+    android:paddingBottom="28dp">
+
+    <ImageView
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:src="@drawable/vocamatelogo"
+        android:contentDescription="VocaMate Logo"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VocaMate"
+        android:textColor="@color/text_main"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login to start"
+        android:textColor="@color/text_secondary"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginBottom="34dp" />
+
+    <Button
+        android:id="@+id/btnGoogleLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue with Google"
+        android:textColor="@color/bg_dark"
+        android:background="@drawable/button_primary" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Speak better. Learn faster."
+        android:textColor="@color/primary_green_light"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:alpha="0.85"
+        android:layout_marginTop="24dp" />
+
+</LinearLayout>

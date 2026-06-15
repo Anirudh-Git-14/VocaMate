@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:fitsSystemWindows="true"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingStart="28dp"
+        android:paddingEnd="28dp"
+        android:paddingTop="36dp"
+        android:paddingBottom="28dp">
+
+        <TextView
+            android:id="@+id/txtSelectedLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Language: English"
+            android:textColor="@color/text_secondary"
+            android:textSize="16sp"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Practice Mode"
+            android:textColor="@color/text_main"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select how you want the AI to talk with you"
+            android:textColor="@color/text_secondary"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_marginBottom="30dp" />
+
+        <Button
+            android:id="@+id/btnFriend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Friend Mode"
+            android:background="@drawable/button_primary"
+            android:textColor="@color/bg_dark" />
+
+        <Button
+            android:id="@+id/btnHR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HR Interview Mode"
+            android:background="@drawable/button_primary"
+            android:textColor="@color/bg_dark"
+            android:layout_marginTop="14dp" />
+
+        <Button
+            android:id="@+id/btnOfficer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Manager Mode"
+            android:background="@drawable/button_primary"
+            android:textColor="@color/bg_dark"
+            android:layout_marginTop="14dp" />
+
+        <Button
+            android:id="@+id/btnParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Parent Mode"
+            android:background="@drawable/button_primary"
+            android:textColor="@color/bg_dark"
+            android:layout_marginTop="14dp" />
+
+        <Button
+            android:id="@+id/btnPartner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Partner Mode"
+            android:background="@drawable/button_primary"
+            android:textColor="@color/bg_dark"
+            android:layout_marginTop="14dp" />
+        <Button
+            android:id="@+id/btnLanguageHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Language History"
+            android:textColor="@color/bg_dark"
+            android:background="@drawable/button_primary"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+</ScrollView>

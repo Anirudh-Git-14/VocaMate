@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:fitsSystemWindows="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="36dp"
+            android:paddingBottom="32dp">
+
+            <ImageButton
+                android:id="@+id/btnSettings"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="end"
+                android:background="@android:color/transparent"
+                android:contentDescription="Settings"
+                android:padding="10dp"
+                android:src="@drawable/ic_settings" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose Language"
+                android:textColor="@color/text_main"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select the language you want to practice"
+                android:textColor="@color/text_secondary"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="28dp" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:useDefaultMargins="true">
+
+                <Button
+                    android:id="@+id/btnEnglish"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_columnWeight="1"
+                    android:background="@drawable/language_chip"
+                    android:text="English"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_main"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btnHindi"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_columnWeight="1"
+                    android:background="@drawable/language_chip"
+                    android:text="Hindi"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_main"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btnTelugu"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_columnWeight="1"
+                    android:background="@drawable/language_chip"
+                    android:text="Telugu"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_main"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btnTamil"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_columnWeight="1"
+                    android:background="@drawable/language_chip"
+                    android:text="Tamil"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_main"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btnKannada"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_columnWeight="1"
+                    android:background="@drawable/language_chip"
+                    android:text="Kannada"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_main"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btnFrench"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_columnWeight="1"
+                    android:background="@drawable/language_chip"
+                    android:text="French"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_main"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btnSpanish"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_columnWeight="1"
+                    android:background="@drawable/language_chip"
+                    android:text="Spanish"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_main"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btnGerman"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_columnWeight="1"
+                    android:background="@drawable/language_chip"
+                    android:text="German"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_main"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btnMalayalam"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_columnWeight="1"
+                    android:background="@drawable/language_chip"
+                    android:text="Malayalam"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_main"
+                    android:textSize="15sp" />
+                <Button
+                    android:id="@+id/btnJapanese"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_columnWeight="1"
+                    android:background="@drawable/language_chip"
+                    android:text="Japanese"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_main"
+                    android:textSize="15sp" />
+
+            </GridLayout>
+
+            <Button
+                android:id="@+id/btnAllHistory"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/button_primary"
+                android:text="View All Practice History"
+                android:textAllCaps="false"
+                android:textColor="@color/bg_dark"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

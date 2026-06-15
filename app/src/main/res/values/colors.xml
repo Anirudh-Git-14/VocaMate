@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_dark">#050A07</color>
+    <color name="surface_dark">#0F1A14</color>
+
+    <color name="primary_green">#22C55E</color>
+    <color name="primary_green_dark">#16A34A</color>
+    <color name="primary_green_light">#86EFAC</color>
+
+    <color name="text_main">#F8FAFC</color>
+    <color name="text_secondary">#A7B4AA</color>
+
+    <color name="error_red">#EF4444</color>
+</resources>

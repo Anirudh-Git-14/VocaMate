@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mistake Report"
+            android:textColor="@color/text_main"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:id="@+id/txtReportInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Language and Mode"
+            android:textColor="@color/text_secondary"
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:id="@+id/txtUserSaid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="What user said:\nNot added yet"
+            android:textColor="@color/text_main"
+            android:textSize="17sp"
+            android:layout_marginBottom="18dp" />
+
+        <TextView
+            android:id="@+id/txtAiReport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AI report will appear here"
+            android:textColor="@color/text_main"
+            android:textSize="17sp"
+            android:lineSpacingExtra="6dp" />
+        <Button
+            android:id="@+id/btnNewConversation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start New Conversation"
+            android:textColor="@color/bg_dark"
+            android:background="@drawable/button_primary"
+            android:layout_marginTop="24dp" />
+
+    </LinearLayout>
+</ScrollView>

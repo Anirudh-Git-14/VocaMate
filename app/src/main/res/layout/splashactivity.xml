@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/bg_dark"
+    android:fitsSystemWindows="true"
+    android:paddingStart="28dp"
+    android:paddingEnd="28dp"
+    android:paddingTop="36dp"
+    android:paddingBottom="28dp">
+
+    <ImageView
+        android:layout_width="145dp"
+        android:layout_height="145dp"
+        android:src="@drawable/vocamatelogo"
+        android:contentDescription="VocaMate Logo"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="26dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VocaMate"
+        android:textColor="@color/text_main"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Speak better. Learn faster."
+        android:textColor="@color/text_secondary"
+        android:textSize="17sp"
+        android:gravity="center"
+        android:layout_marginBottom="22dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AI Voice Speaking Practice"
+        android:textColor="@color/primary_green_light"
+        android:textSize="14sp"
+        android:alpha="0.85" />
+
+</LinearLayout>
