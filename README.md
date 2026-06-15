@@ -159,4 +159,3 @@ Current version includes:
 
 ## Use This Link to Download
 https://github.com/Anirudh-Git-14/VocaMate/raw/main/apk/VocaMate.apk
-(This only works on android phones and download this link in your android phones)
