@@ -61,41 +61,51 @@ Users can view:
 
 ## Screenshots
 
-Splash Screen
+<table>
+  <tr>
+    <td align="center">
+      <b>Splash Screen</b><br>
+      <img src="screenshots/01_splash.jpeg" width="230">
+    </td>
+    <td align="center">
+      <b>Login Screen</b><br>
+      <img src="screenshots/02_login.jpeg" width="230">
+    </td>
+    <td align="center">
+      <b>Language Selection</b><br>
+      <img src="screenshots/03_language.jpeg" width="230">
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <b>Mode Selection</b><br>
+      <img src="screenshots/04_mode.jpeg" width="230">
+    </td>
+    <td align="center">
+      <b>Conversation Screen</b><br>
+      <img src="screenshots/05_conversation.jpeg" width="230">
+    </td>
+    <td align="center">
+      <b>Mistake Report</b><br>
+      <img src="screenshots/06_report.jpeg" width="230">
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <b>Practice History</b><br>
+      <img src="screenshots/07_history.jpeg" width="230">
+    </td>
+    <td align="center">
+      <b>History Detail</b><br>
+      <img src="screenshots/08_history_detail.jpeg" width="230">
+    </td>
+    <td align="center">
+      <b>Settings Screen</b><br>
+      <img src="screenshots/09_settings.jpeg" width="230">
+    </td>
+  </tr>
+</table>
 
-![Splash Screen](screenshots/01_splash.jpeg)
-
-Login Screen
-
-![Login Screen](screenshots/02_login.jpeg)
-
-Language Selection
-
-![Language Selection](screenshots/03_language.jpeg)
-
-Mode Selection
-
-![Mode Selection](screenshots/04_mode.jpeg)
-
-Conversation Screen
-
-![Conversation Screen](screenshots/05_conversation.jpeg)
-
-Mistake Report
-
-![Mistake Report](screenshots/06_report.jpeg)
-
-Practice History
-
-![Practice History](screenshots/07_history.jpeg)
-
-History Detail
-
-![History Detail](screenshots/08_history_detail.jpeg)
-
-Settings Screen
-
-![Settings Screen](screenshots/09_settings.jpeg)
 
 ## Tech Stack
 
