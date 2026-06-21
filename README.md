@@ -157,5 +157,5 @@ Current version includes:
 * App history removal option
 * Settings and logout
 
-## Use This Link to Download
-https://github.com/Anirudh-Git-14/VocaMate/raw/main/apk/VocaMate.apk
+## Use This Link to Download latest version
+https://github.com/Anirudh-Git-14/VocaMate/releases/download/v1.0/app-debug.apk
