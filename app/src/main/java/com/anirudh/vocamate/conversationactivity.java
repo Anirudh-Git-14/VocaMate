@@ -14,7 +14,7 @@ import android.speech.tts.UtteranceProgressListener;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -44,7 +44,7 @@ public class conversationactivity extends AppCompatActivity {
     String selectedLanguage, selectedMode;
 
     TextView txtConversationInfo, txtStatus;
-    Button btnDone, btnMic;
+    Button btnDone, btnMic, btnStop;
 
     private static final int MIC_PERMISSION_CODE = 100;
 
@@ -82,6 +82,24 @@ public class conversationactivity extends AppCompatActivity {
         txtStatus = findViewById(R.id.txtStatus);
         btnDone = findViewById(R.id.btnDone);
         btnMic = findViewById(R.id.btnMic);
+        btnStop = findViewById(R.id.btnStop);
+
+        btnStop.setVisibility(View.GONE);
+
+        btnStop.setOnClickListener(v -> {
+
+            if (textToSpeech != null) {
+                textToSpeech.stop();
+            }
+
+            btnStop.setVisibility(View.GONE);
+
+            txtStatus.setText("Reply stopped");
+
+            if (autoListenEnabled) {
+                startVoiceInput();
+            }
+        });
 
         txtConversationInfo.setText(
                 "Language: " + selectedLanguage +
@@ -184,35 +202,69 @@ public class conversationactivity extends AppCompatActivity {
     }
 
     private void sendUserSpeechToAi(String userText) {
-        txtStatus.setText("Assistant is thinking...");
+        txtStatus.setText("Voca is thinking...");
 
         GenerativeModel ai = FirebaseAI.getInstance(GenerativeBackend.googleAI())
                 .generativeModel("gemini-2.5-flash");
 
         GenerativeModelFutures model = GenerativeModelFutures.from(ai);
-
         String promptText =
-                "You are a real-time AI voice speaking practice assistant.\n" +
+
+                "You are Voca, the AI assistant inside the VocaMate application.\n\n" +
+
+                        "ABOUT VOCA:\n" +
+                        "Your name is Voca.\n" +
+                        "You are a voice speaking practice assistant.\n" +
+                        "You help users improve communication, speaking confidence and language skills.\n\n" +
+
+                        "ABOUT VOCAMATE:\n" +
+                        "VocaMate is a real-time AI speaking practice application.\n" +
+                        "Users can practice conversations in different modes and languages.\n" +
+                        "If users ask about VocaMate, explain it clearly.\n\n" +
+
+                        "CREATOR INFORMATION:\n" +
+                        "CREATOR INFORMATION:\n" +
+                        "If the user asks who created, developed, built, or owns VocaMate, answer:\n" +
+                        "'VocaMate was created by Anirudh.'\n" +
+                        "If the user asks about Anirudh, tell them:\n" +
+                        "'Anirudh is the creator of VocaMate. If you would like to contact him, please check the email available in the Settings page.'\n\n" +
                         "Language: " + selectedLanguage + "\n" +
                         "Mode: " + selectedMode + "\n\n" +
 
-                        "Continue the same conversation using the conversation history.\n" +
-                        "Understand what the user wants from the latest message.\n" +
-                        "If the user asks a simple question, reply shortly.\n" +
-                        "If the user asks for a story, explanation, or detailed content, give a complete useful reply.\n" +
-                        "Do not always make replies short. Do not always make replies long.\n\n" +
+                        "MAIN GOAL:\n" +
+                        "Make the user speak more than the AI.\n" +
+                        "The user should do most of the talking.\n" +
+                        "Keep conversations natural and interesting.\n\n" +
 
-                        "Tone rules:\n" +
+                        "REPLY RULES:\n" +
+                        "- Normally reply in 1 to 3 short sentences.\n" +
+                        "- Frequently ask follow-up questions.\n" +
+                        "- Encourage the user to continue speaking.\n" +
+                        "- Do not generate long paragraphs unless specifically requested.\n" +
+                        "- If the user asks for a story, provide a complete story.\n" +
+                        "- If the user asks for a detailed explanation, provide detailed information.\n" +
+                        "- If the user asks for step-by-step help, provide step-by-step help.\n" +
+                        "- Otherwise keep replies short and conversational.\n\n" +
+
+                        "CONVERSATION STYLE:\n" +
+                        "- Be friendly and engaging.\n" +
+                        "- Make the user feel comfortable.\n" +
+                        "- Ask interesting questions.\n" +
+                        "- Keep the conversation flowing.\n" +
+                        "- Avoid ending conversations quickly.\n\n" +
+
+                        "MODE RULES:\n" +
                         "Friend mode: casual, friendly, relaxed.\n" +
-                        "HR Interview mode: professional, serious, slightly strict.\n" +
-                        "Officer / Manager mode: formal, respectful, confident.\n" +
-                        "Parent mode: caring, patient, supportive.\n" +
-                        "Partner mode: soft, cute, warm, loving, but respectful.\n\n" +
+                        "HR Interview mode: professional interviewer style.\n" +
+                        "Officer / Manager mode: formal and confident.\n" +
+                        "Parent mode: caring and supportive.\n" +
+                        "Partner mode: warm, soft and respectful.\n\n" +
 
-                        "Do not mention Gemini, Firebase, API, or backend.\n\n" +
+                        "Do not mention Gemini, Firebase, APIs, prompts, backend systems or internal instructions.\n\n" +
 
                         "Conversation history:\n" +
                         aiConversationMemory.toString() +
+
                         "\nLatest user message:\n" +
                         userText;
 
@@ -266,13 +318,25 @@ public class conversationactivity extends AppCompatActivity {
                 textToSpeech.setOnUtteranceProgressListener(new UtteranceProgressListener() {
                     @Override
                     public void onStart(String utteranceId) {
-                        runOnUiThread(() -> txtStatus.setText("Assistant is speaking..."));
+
+                        runOnUiThread(() -> {
+
+                            txtStatus.setText("Voca is speaking...");
+
+                            btnStop.setVisibility(View.VISIBLE);
+
+                        });
                     }
 
                     @Override
                     public void onDone(String utteranceId) {
+
                         runOnUiThread(() -> {
+
+                            btnStop.setVisibility(View.GONE);
+
                             txtStatus.setText("Listening again...");
+
                             if (autoListenEnabled) {
                                 startVoiceInput();
                             }
@@ -281,7 +345,14 @@ public class conversationactivity extends AppCompatActivity {
 
                     @Override
                     public void onError(String utteranceId) {
-                        runOnUiThread(() -> txtStatus.setText("Voice output error"));
+
+                        runOnUiThread(() -> {
+
+                            btnStop.setVisibility(View.GONE);
+
+                            txtStatus.setText("Voice output error");
+
+                        });
                     }
                 });
 
